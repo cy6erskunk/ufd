@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         dest: 'dist/<%=pkg.name%>-<%=pkg.version%>/'
       },
       files: {
-        src: [ 'README.txt', '*-LICENSE.txt'],
+        src: [ 'README.md', '*-LICENSE.txt'],
         dest: 'dist/<%=pkg.name%>-<%=pkg.version%>/'
       },
       js: {
