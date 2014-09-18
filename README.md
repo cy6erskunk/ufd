@@ -16,4 +16,9 @@ See examples/index.html for demonstration page, or visit the website for documen
 Building
 ----
 
-    grunt
+    npm install && grunt
+
+Testing
+-------
+
+    grunt test

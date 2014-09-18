@@ -47,9 +47,29 @@ module.exports = function(grunt) {
         src: 'dist/<%=pkg.name%>-<%=pkg.version%>/**',
         dest: 'dist/<%=pkg.name%>-<%=pkg.version%>.zip'
       }
+    },
+
+    qunit: {
+    all: {
+      options: {
+        urls: [
+          'http://localhost:8000/test/index.html',
+        ]
+      }
     }
+  },
+  connect: {
+    server: {
+      options: {
+        port: 8000,
+        base: '.'
+      }
+    }
+  }
+
   });
 
+  grunt.registerTask('test', ['connect', 'qunit']);
   grunt.registerTask('default', ['clean', 'copy', 'uglify', 'zip' ]);
 
 };
